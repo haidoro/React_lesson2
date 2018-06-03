@@ -34,6 +34,12 @@ git grep "Welcome to React"
 ```
 5. src/App.jsの`<h1 className="App-title">Welcome to React</h1>`を`<h1 className="App-title">Hello world</h1>`に変更する。
 
+git addしたあとcommitしてリモートにPushします。
+```
+git add .  
+git commit
+git push -u origin HEAD
+```
 ## 独自boilerplate作成
 
 先に作成したHello worldを変更します。
