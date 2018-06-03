@@ -145,3 +145,8 @@ return (
     </React.Fragment>
     )
 ```
+
+### BABELについて
+JSXに記述した内容をJavaScriptにトランスパイルするのはBABELです。constをvarに変換したりもできるよ！
+[BABEL オンライン変換のページ](https://babeljs.io/repl/)
+
