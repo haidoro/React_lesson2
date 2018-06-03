@@ -21,7 +21,7 @@ create-react-app hello
 ```
 3. helloフォルダにcdで移動後yarnでサーバー起動
 ```
-yarn run start
+yarn start
 ```
 `http://localhost:3000`/の「Welcome to React」ページが自動で開きます。
 サーバー閉じるにはCtrl+C (注意Command+Cではない！）
@@ -33,3 +33,12 @@ git grepコマンドで 「Welcome to React」がどこに記述されたいる�
 git grep "Welcome to React"
 ```
 5. src/App.jsの`<h1 className="App-title">Welcome to React</h1>`を`<h1 className="App-title">Hello world</h1>`に変更する。
+
+## 独自boilerplate作成
+
+先に作成したHello worldを変更します。
+ブランチを新しく作成
+
+```
+git checkout - b my-boilerplate
+```
