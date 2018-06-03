@@ -46,5 +46,19 @@ git push -u origin HEAD
 ブランチを新しく作成
 
 ```
-git checkout - b my-boilerplate
+git checkout -b my-boilerplate
+```
+App.cssとApp.test.js、logo.svgは不要なので削除
+
+App.jsは以下の内容に変更（不要なコードは削除）
+```
+import React, { Component } from 'react';
+
+class App extends Component {
+  render() {   
+      <div><h1>Hello world!</h1></div>
+  }
+}
+
+export default App;
 ```
