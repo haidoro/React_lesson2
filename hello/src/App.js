@@ -2,17 +2,10 @@ import React, { Component } from 'react';
 
 class App extends Component {
   render() {
-     return <h1>Hello world!</h1>;
+    const greeting = "Hi"
+    const dom = <h1 className="foo">{greeting}</h1>;
+    return dom;
   }
 }
-// class App extends Component {
-//   render() {
-//      return React.createElement(
-//        "div",
-//        null,
-//        "Hello world!"
-//      )
-//   }
-// }
 
 export default App;

@@ -85,3 +85,32 @@ render() {
      )
   }
 ```
+
+## JSXの文法
+`import React, { Component } from 'react';`のReactはなぜ必要か?  
+これはJSXを使用するために必要だからです。
+また、DOMを変数を使っても大丈夫です。
+
+```
+render() {
+    const dom = <h1>Hi</h1>;
+    return dom;
+}
+```
+さらに次のような表現も可能(ES6の` `内の変数展開の考え方と同様)
+```
+render() {
+    const greeting = "Hi"
+    const dom = <h1>{greeting}</h1>;
+    return dom;
+  }
+```
+### JSXでのクラス名の指定
+`className="foo"`のようにclassNameとする。
+```
+render() {
+    const greeting = "Hi"
+    const dom = <h1 className="foo">{greeting}</h1>;
+    return dom;
+  }
+```
