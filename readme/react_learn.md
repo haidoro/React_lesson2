@@ -114,3 +114,34 @@ render() {
     return dom;
   }
 ```
+
+### JSXでのイベント
+
+```
+render() {
+    return <input type="text" onChange={() => {console.log("I am clicked.")}} />
+  }
+}
+```
+
+### JSX内に複数のタグを使用する場合
+JSX内で複数のタグを使用する場合は、returnの直下にはタグは1つのみという制約があるため、入れ子状態にして行う。
+
+```
+return (
+    <div>
+      <label htmlFor="bar">bar</label>
+      <input type="text" onChange={() => {console.log("I am clicked.")}} />
+    </div>
+)
+```
+ただし、この方法では余計なdivタグを作成することになるので、
+代替方法として`<React.Fragment>`タグを使用することができる。これはHTML上には表示されないものです。
+```
+return (
+    <React.Fragment>
+      <label htmlFor="bar">bar</label>
+      <input type="text" onChange={() => {console.log("I am clicked.")}} />
+    </React.Fragment>
+    )
+```
