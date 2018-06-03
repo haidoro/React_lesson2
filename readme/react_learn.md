@@ -1,9 +1,11 @@
 # React
-Facrbookが提供しているCLIツール「Create React App」  
-驚きの手軽さでプロジェクト構造がセットアップされる。
+facebookが開発したJavaScriptライブラリ
+## React実例
+facebook,slack,Qiita,NETFLIX,Airbnbなど
 
 ## create react app
-
+Facrbookが提供しているCLIツール「Create React App」  
+驚きの手軽さでプロジェクト構造がセットアップされる。
 ```
 yarn global add create-react-app
 ```
@@ -61,4 +63,25 @@ class App extends Component {
 }
 
 export default App;
+```
+
+## JSXについて
+JSXとはJavaScriptとXMLを拡張したもの
+
+App.jsファイルのreturn以降のdivタグに囲まれた部分がJSXになる。
+```
+render() {
+   return <div>Hello world!</div>;
+}
+```
+これをトランスファイルという仕組みでJavaScriptに変換している。上のコードを以下のように記述しても同じ結果になる。  
+つまり、記述が簡単になるメリットがある。
+```
+render() {
+     return React.createElement(
+       "div",
+       null,
+       "Hello world!"
+     )
+  }
 ```
