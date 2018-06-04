@@ -172,3 +172,6 @@ const Cat = ()=>{
 	return <div>Meow!</div>
 }
 ```
+
+## props
+propsとはコンポーネントの属性です。数値、オブジェクト、関数など使用できる。
