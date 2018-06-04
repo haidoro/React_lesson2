@@ -150,3 +150,25 @@ return (
 JSXに記述した内容をJavaScriptにトランスパイルするのはBABELです。constをvarに変換したりもできるよ！
 [BABEL オンライン変換のページ](https://babeljs.io/repl/)
 
+## コンポーネントについて
+Reactのコンポーネントには関数定義によるコンポーネントとClassによるコンポーネントと2種類あります。
+
+### functionalコンポーネントの例
+
+App.js
+```
+import React from 'react';
+const App = () =>{
+	return (
+			<div>
+				<Cat />
+				<Cat />
+				<Cat />
+				<Cat />
+			</div>
+		)
+}
+const Cat = ()=>{
+	return <div>Meow!</div>
+}
+```
