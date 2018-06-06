@@ -238,3 +238,14 @@ User.PropTypes = {
 
 export default App;
 ```
+
+## state
+propsは親のコンポーネントから値を渡され、stateはコンポーネントの内部でのみ使われるもの。
+propsは変更不可能な値、stateは変更可能な値
+
+stateはClassコンポーネントで使用できる機能
+
+setState()を使って状態（state）を変更します。これを使うことで変更したstateを再レンダリングしてDOMに表示してくれます。
+つまりrenderが実行されます。
+
+
