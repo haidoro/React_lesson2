@@ -175,3 +175,66 @@ const Cat = ()=>{
 
 ## props
 propsとはコンポーネントの属性です。数値、オブジェクト、関数など使用できる。
+
+App.js
+```
+import React from 'react';
+
+
+const App = () => {
+	const profiles = [
+		{name:"Taro",age:10},
+		{name:"Hanako",age:5}
+	]
+	return (
+			<div>
+			{
+				profiles.map((profile,index) => {
+					return <User name={profile.name} age={profile.age} key={index}/>
+				})
+			}
+			</div>
+		)
+}
+const User = (props)=>{
+	return <div>Hi ,I am {props.name},and {props.age}years old! </div>
+}
+
+
+export default App;
+
+```
+
+## prop typs
+PropTypesを指定すると、違う型の値をpropsで渡した時にwarningが表示される。
+
+```
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
+const App = () => {
+	const profiles = [
+		{name:"Taro",age:10},
+		{name:"Hanako",age:5},
+		{name:8}
+	]
+	return (
+			<div>
+			{
+				profiles.map((profile,index) => {
+					return <User name={profile.name} age={profile.age} key={index}/>
+				})
+			}
+			</div>
+		)
+}
+const User = (props)=>{
+	return <div>Hi ,I am {props.name},and {props.age}years old! </div>
+}
+User.PropTypes = {
+	name: PropTypes.string
+}
+
+export default App;
+```
