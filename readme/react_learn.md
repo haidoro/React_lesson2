@@ -248,4 +248,38 @@ stateはClassコンポーネントで使用できる機能
 setState()を使って状態（state）を変更します。これを使うことで変更したstateを再レンダリングしてDOMに表示してくれます。
 つまりrenderが実行されます。
 
+```
+import React,{ Component } from 'react';
 
+
+
+const App = () => (<Counter></Counter>)
+class Counter extends Component {
+	constructor(props){
+		super(props)
+		console.log(this.state)
+		this.state = {count:0}
+	}
+	handlePlusButton = () => {
+		console.log("handlePlusButton");
+		console.log(this.state.count);
+		this.setState({count:this.state.count + 1})
+	}
+	handleMinusButton = () => {
+		this.setState({count:this.state.count - 1})
+	}
+	render(){
+		console.log(this.state)
+		return (
+			<React.Fragment>
+				<div>counter: {this.state.count}</div>
+				<button onClick={this.handlePlusButton}>+1</button>
+				<button onClick={this.handleMinusButton}>-1</button>
+			</React.Fragment>
+		)
+	}
+}
+
+export default App;
+
+```
