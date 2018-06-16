@@ -283,3 +283,11 @@ class Counter extends Component {
 export default App;
 
 ```
+
+#Redux
+
+## Reduxの導入
+```
+yarn add redux react-redux
+```
+
